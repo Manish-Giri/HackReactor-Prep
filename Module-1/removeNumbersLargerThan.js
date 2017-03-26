@@ -32,3 +32,20 @@ function removeStringValuesLongerThan(num, obj) {
     }
     return obj;
 }
+
+function removeEvenValues(obj) {
+    // your code here
+    for (var prop in obj) {
+        if (typeof obj[prop] === "number") {
+            if (obj[prop] % 2 === 0) {
+                delete obj[prop];
+            }
+        }
+    }
+    return obj;
+}
+
+function countNumberOfKeys(obj) {
+    // your code here
+    return Object.keys(obj).length;
+}
