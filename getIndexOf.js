@@ -23,3 +23,26 @@ function findMinLengthOfThreeWords(word1, word2, word3) {
     var wordLengths = [...arguments].map(word => word.length);
     return Math.min(...wordLengths);
 }
+
+function findMaxLengthOfThreeWords(word1, word2, word3) {
+    // your code here
+    var wordLengths = [...arguments].map(word => word.length);
+    return Math.max(...wordLengths);
+}
+
+function getElementsThatEqual10AtProperty(obj, key) {
+    // your code here
+    var result = [];
+    var values = obj[key];
+    if (!values || !values.includes(10) || !Array.isArray(values)) {
+        return [];
+    } else {
+        values.forEach(element => {
+            if (element === 10) {
+                result.push(element);
+            }
+        });
+    }
+    return result;
+
+}
