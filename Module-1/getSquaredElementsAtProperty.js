@@ -84,3 +84,57 @@ function getSmallestElementAtProperty(obj, key) {
         return Math.min(...values);
     }
 }
+
+function getLargestElementAtProperty(obj, key) {
+    // your code here
+    var values = obj[key];
+
+    if (!Array.isArray(values) || !values.length || !values) {
+        return undefined;
+    } else {
+        return Math.max(...values);
+    }
+}
+
+function getAllButLastElementOfProperty(obj, key) {
+    // your code herevar values = obj[key];
+    var values = obj[key];
+    if (!Array.isArray(values) || !values.length || !values) {
+        return [];
+    } else {
+        return values.filter((element, index) => index !== values.length - 1);
+    }
+}
+
+function getElementOfArrayProperty(obj, key, index) {
+    // your code here
+    var values = obj[key];
+
+    if (!Array.isArray(values) || !values.length || !values) {
+        return undefined;
+    } else {
+        return values[index];
+    }
+}
+
+function getElementOfArrayProperty(obj, key, index) {
+    // your code here
+    var values = obj[key];
+
+    if (!Array.isArray(values) || !values.length || !values) {
+        return undefined;
+    } else {
+        return values[index];
+    }
+}
+
+function getElementOfArrayProperty(obj, key, index) {
+    // your code here
+    var values = obj[key];
+
+    if (!Array.isArray(values) || !values.length || !values) {
+        return undefined;
+    } else {
+        return values[index];
+    }
+}
