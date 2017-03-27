@@ -37,3 +37,14 @@ function getElementsGreaterThan10AtProperty(obj, key) {
     }
     return result;
 }
+
+function removeElement(array, discarder) {
+    // your code here
+    if (!array.includes(discarder) || !array.length) {
+        return [];
+    } else {
+        return array.filter(element => {
+            return element !== discarder;
+        });
+    }
+}
