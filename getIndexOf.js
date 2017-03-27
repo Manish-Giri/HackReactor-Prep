@@ -46,3 +46,23 @@ function getElementsThatEqual10AtProperty(obj, key) {
     return result;
 
 }
+
+function getElementsLessThan100AtProperty(obj, key) {
+    // your code here
+
+    function isLessThan100(numbers) {
+        return numbers.some(number => number < 100);
+    }
+    var result = [];
+    var values = obj[key];
+    if (!Array.isArray(values) || !values || !isLessThan100(values)) {
+        return [];
+    } else {
+        values.forEach(element => {
+            if (element < 100) {
+                result.push(element);
+            }
+        });
+    }
+    return result;
+}
