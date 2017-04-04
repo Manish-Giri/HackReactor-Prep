@@ -26,7 +26,19 @@ Notes:
 */
 function getStringLength(string) {
   // your code here
-  return string.split(' ').reduce(function(acc, curr){
+  if(!string) {
+    return 0;
+  }
+  return string.split('').reduce(function(acc, curr){
     return acc + 1;
   }, 0);
+}
+
+function joinArrayOfArrays(arr) {
+  // your code here
+  var result = [];
+  for(var i = 0; i < arr.length; i++) {
+    result = result.concat(arr[i]);
+  }
+  return result;
 }
