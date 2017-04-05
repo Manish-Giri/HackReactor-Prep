@@ -17,3 +17,15 @@ function getProductOfAllElementsAtProperty(obj, key) {
   
   return value.reduce((acc,curr) => acc * curr);
 }
+
+
+function getSumOfAllElementsAtProperty(obj, key) {
+  // your code here
+  var value = obj[key];
+  
+  if(!Array.isArray(value) || !value.length || !value) {
+    return 0;
+  }
+  
+  return value.reduce((acc,curr) => acc + curr);
+}
