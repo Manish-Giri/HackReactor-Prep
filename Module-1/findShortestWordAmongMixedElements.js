@@ -32,3 +32,26 @@ function findShortestWordAmongMixedElements(arr) {
   var ans = strings[shortest];
   return ans;
 }
+
+// Write a function called "findSmallestNumberAmongMixedElements".
+
+// Given an array of mixed elements, "findSmallestNumberAmongMixedElements" returns the smallest number within the given array.
+
+// Notes:
+// * If the given array is empty, it should return 0.
+// * If the array contains no numbers, it should return 0.
+
+function findSmallestNumberAmongMixedElements(arr) {
+  // your code here
+  function hasNumbers(arr) {
+    return arr.some(function(e){
+      return typeof e === "number";
+    });
+  }
+  
+  if(!arr.length || !hasNumbers(arr)) {
+    return 0;
+  }
+  var numbers = arr.filter(e => typeof e === "number");
+  return Math.min(...numbers);
+}
